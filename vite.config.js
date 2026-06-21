@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  // Base path for GitHub Pages deployment: /repository-name/
-  base: '/terms/',
+  // Since custom domains serve at the root level, change the base to '/'
+  base: '/',
 })
