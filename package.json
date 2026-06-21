@@ -1,0 +1,13 @@
+{
+  "name": "spendy-terms-conditions",
+  "version": "1.0.0",
+  "description": "Premium offline-first terms and conditions site for Spendy",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0"
+  }
+}

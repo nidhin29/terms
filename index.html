@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Terms and Conditions - Spendy (100% Offline-First Finance)</title>
+    <meta name="description" content="Read the Terms and Conditions for Spendy. Learn about your license grant, local data storage policy, and responsibility for device security and backup encryption keys.">
+    <meta name="author" content="NidhinV">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Spendy - Terms and Conditions">
+    <meta property="og:description" content="Spendy is an offline-first finance tracking tool. Read the terms governing SMS parsing, OCR receipt scans, and encrypted backups.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/nidhinv/spendy/main/assets/terms-banner.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Spendy - Terms and Conditions">
+    <meta property="twitter:description" content="All data is stored locally. Read the terms for local AI automation and encrypted user backups.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Toast Notification for Interactions -->
+    <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <span class="toast-icon"></span>
+        <span class="toast-message">Action completed successfully!</span>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-area">
+                <svg class="app-logo" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="3" y="6" width="18" height="13" rx="3" stroke="currentColor" stroke-width="2"/>
+                    <path d="M3 10H21" stroke="currentColor" stroke-width="2"/>
+                    <circle cx="17" cy="14" r="1" fill="currentColor"/>
+                    <path d="M12 6V3M8 6V4M16 6V4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M9 14.5L11 16.5L15 12.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="app-name">Spendy</span>
+                <span class="badge badge-primary">Terms & Conditions</span>
+            </div>
+
+            <!-- Search and Actions Bar -->
+            <div class="header-actions">
+                <div class="search-wrapper">
+                    <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <input type="text" id="search-input" placeholder="Search terms... (Press '/')" aria-label="Search terms and conditions">
+                    <span class="search-kbd">/</span>
+                    <button id="search-clear" class="search-clear" aria-label="Clear search" style="display: none;">&times;</button>
+                </div>
+
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light and dark mode">
+                    <!-- Light Mode (Sun) Icon -->
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 1V3M12 21V23M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M1 12H3M21 12H23M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <!-- Dark Mode (Moon) Icon -->
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="layout-container">
+        
+        <!-- Table of Contents Sidebar -->
+        <aside class="sidebar">
+            <nav class="toc-nav" aria-label="Table of Contents">
+                <div class="toc-title">ON THIS PAGE</div>
+                <ul id="toc-list">
+                    <li><a href="#license" class="toc-link active">1. License Grant</a></li>
+                    <li><a href="#automation" class="toc-link">2. On-Device Automation</a></li>
+                    <li><a href="#disclaimer" class="toc-link">3. Professional Advice</a></li>
+                    <li><a href="#security" class="toc-link">4. Security & Backups</a></li>
+                    <li><a href="#liability" class="toc-link">5. Limitation of Liability</a></li>
+                    <li><a href="#property" class="toc-link">6. Intellectual Property</a></li>
+                    <li><a href="#governing-law" class="toc-link">7. Governing Law</a></li>
+                    <li><a href="#changes" class="toc-link">8. Changes to Terms</a></li>
+                    <li><a href="#contact" class="toc-link">9. Contact Developer</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="content-area">
+            
+            <!-- Hero Title -->
+            <section class="hero-section">
+                <h1>Terms and Conditions for Spendy</h1>
+                <div class="meta-info">
+                    <span class="meta-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 2V6M8 2V6M3 10H21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        Last Updated: June 21, 2026
+                    </span>
+                    <span class="meta-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        3 min read
+                    </span>
+                    <button id="print-btn" class="btn btn-secondary btn-sm" aria-label="Print or download PDF">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 9V2H18V9M6 18H4C2.89543 18 2 17.1046 2 16V11C2 9.89543 2.89543 9 4 9H20C21.1046 9 22 9.89543 22 11V16C22 17.1046 21.1046 18 20 18H18M6 14H18V22H6V14Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Print / PDF
+                    </button>
+                </div>
+
+                <p class="intro-lead">
+                    Welcome to Spendy! These Terms and Conditions (&quot;Terms&quot;) govern your use of the Spendy mobile application (&quot;Application&quot;), developed by <strong>NidhinV</strong> (&quot;Developer,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). By downloading, installing, or using Spendy, you agree to be bound by these Terms. If you do not agree to these Terms, do not use the Application.
+                </p>
+
+                <!-- 100% Offline-First Important Notice Card -->
+                <div class="warning-card">
+                    <div class="warning-glowing-effect"></div>
+                    <div class="warning-header">
+                        <div class="pulsing-warning">
+                            <svg class="warning-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" fill="var(--danger-alpha-1)" stroke="var(--danger)" stroke-width="2" stroke-linejoin="round"/>
+                                <line x1="12" y1="9" x2="12" y2="13" stroke="var(--danger)" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="12" y1="17" x2="12.01" y2="17" stroke="var(--danger)" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                            <span class="warning-pulse-dot"></span>
+                        </div>
+                        <h3>CRITICAL OFFLINE-FIRST NOTICE</h3>
+                    </div>
+                    <p class="warning-text">
+                        Spendy is an offline-first tool. All database assets, configurations, and transaction records are stored <strong>directly in your device's local memory</strong>. If you delete the Application, format your device, or clear the storage cache without performing an encrypted external backup, <strong>your data will be permanently and irreversibly lost</strong>.
+                    </p>
+                </div>
+            </section>
+
+            <!-- 1. License Grant -->
+            <section id="license" class="policy-section">
+                <h2>1. License Grant</h2>
+                <p>We grant you a personal, non-exclusive, non-transferable, revocable license to use the Application on a single mobile device owned or controlled by you, strictly in accordance with these Terms.</p>
+            </section>
+
+            <!-- 2. Use of On-Device Automation features -->
+            <section id="automation" class="policy-section">
+                <h2>2. Use of On-Device Automation Features</h2>
+                <p>Spendy includes features designed to simplify your financial tracking, including automatic SMS parsing, Voice recording, and Optical Character Recognition (OCR) receipt scanning.</p>
+                
+                <div class="data-types-grid">
+                    <div class="data-card">
+                        <div class="data-card-icon-wrapper message-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                <path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>SMS Interception</h3>
+                        <p>Driven by regular expressions and local AI algorithms. Intercepts transaction alerts completely offline.</p>
+                    </div>
+
+                    <div class="data-card">
+                        <div class="data-card-icon-wrapper camera-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="12" cy="13" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>OCR Receipt Scanning</h3>
+                        <p>Performs optical character recognition on receipt images to extract transaction parameters locally.</p>
+                    </div>
+
+                    <div class="data-card">
+                        <div class="data-card-icon-wrapper mic-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M19 10v1a7 7 0 0 1-14 0v-1M12 19v4M8 23h8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Voice Log Recognition</h3>
+                        <p>Processes recorded voice clips into text to structure transaction logs completely on-device.</p>
+                    </div>
+                </div>
+
+                <div class="disclaimer-alert-box">
+                    <div class="disclaimer-header">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                            <line x1="12" y1="8" x2="12" y2="12" stroke="currentColor" stroke-width="2"/>
+                            <line x1="12" y1="16" x2="12.01" y2="16" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <strong>Parsing Disclaimers &amp; User Verification Required:</strong>
+                    </div>
+                    <ul>
+                        <li>Due to structural variations in bank notifications, cellular network delivery, or local AI inference variables, we do not warrant or guarantee that transaction alerts will be parsed with 100% accuracy.</li>
+                        <li>You agree that it is your responsibility to manually inspect and verify all transactions, merchant categories, wallet assignments, and amounts logged by the automated systems. You should not rely on automated entries as a perfect representation of your accounts.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 3. Disclaimer of Professional Advice -->
+            <section id="disclaimer" class="policy-section">
+                <h2>3. Disclaimer of Professional Advice</h2>
+                <p>Spendy is intended solely for personal expenditure tracking and budgeting purposes. The Application and its local AI helper (Spendy AI) do not provide tax, legal, investment, or professional financial advice. All analysis, budget limits, or suggestions are advisory only.</p>
+            </section>
+
+            <!-- 4. Responsibility for Security and Backups -->
+            <section id="security" class="policy-section">
+                <h2>4. Responsibility for Security and Backups</h2>
+                <ul>
+                    <li><strong>Local Security:</strong> The database is secured locally using AES-256 encryption. You are responsible for safeguarding your device, setting up an App Lock PIN/Biometrics, and preventing unauthorized access to your phone.</li>
+                    <li><strong>Google Drive Integration:</strong> If you use the backup functionality, your Google account is governed by Google’s own terms of service. You are responsible for remembering your custom encryption keys used to encrypt the backup archives. If you lose your encryption keys, the Developer cannot decrypt your backup files.</li>
+                </ul>
+
+                <!-- Interactive AES-256 Key Encryption Simulator -->
+                <div class="simulator-card">
+                    <div class="simulator-header">
+                        <h4>Local AES-256 Backup & Key Validator</h4>
+                        <span class="status-badge status-ready" id="sim-status">Ready</span>
+                    </div>
+                    <p class="simulator-desc">
+                        To protect your privacy, backup archives are encrypted locally before uploading. Test how a custom key locks your database. If you lose this key, the database remains permanently unreadable.
+                    </p>
+                    
+                    <div class="simulator-split">
+                        <!-- Panel 1: Encryption -->
+                        <div class="sim-panel" id="panel-encrypt">
+                            <h5>1. Encrypt Database</h5>
+                            <div class="form-group">
+                                <label for="enc-key">Set Custom Encryption Key:</label>
+                                <div class="input-wrapper">
+                                    <input type="password" id="enc-key" placeholder="Enter at least 6 characters" class="form-input">
+                                </div>
+                                <span class="input-help">This key is never uploaded to any server.</span>
+                            </div>
+                            <button id="encrypt-btn" class="btn btn-primary btn-block">Encrypt Data</button>
+                            
+                            <div class="data-preview-box">
+                                <div class="preview-header">Database State: (Plaintext)</div>
+                                <pre class="code-preview" id="plaintext-db">
+{
+  "developer": "NidhinV",
+  "accounts": [
+    {"name": "Main Account", "suffix": "9842"},
+    {"name": "Cash Wallet", "balance": "₹4,250"}
+  ],
+  "logged_sms_alerts": 12
+}</pre>
+                            </div>
+                        </div>
+
+                        <!-- Panel 2: Decryption -->
+                        <div class="sim-panel panel-disabled" id="panel-decrypt">
+                            <h5>2. Decrypt & Restore Database</h5>
+                            <div class="form-group">
+                                <label for="dec-key">Enter Decryption Key:</label>
+                                <input type="password" id="dec-key" placeholder="Enter key..." class="form-input" disabled>
+                            </div>
+                            <button id="decrypt-btn" class="btn btn-success btn-block" disabled>Decrypt & Sync</button>
+                            
+                            <div class="data-preview-box">
+                                <div class="preview-header">Restore Output:</div>
+                                <pre class="code-preview encrypted-output" id="ciphertext-db">Waiting for encryption...</pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. Limitation of Liability -->
+            <section id="liability" class="policy-section">
+                <h2>5. Limitation of Liability</h2>
+                <p>To the maximum extent permitted by applicable law, the Developer shall not be liable for any direct, indirect, incidental, special, exemplary, or consequential damages, including but not limited to:</p>
+                <ul class="standard-bullets">
+                    <li>Loss of profits, revenue, or savings.</li>
+                    <li>Loss, corruption, or leakage of transaction logs or local databases.</li>
+                    <li>Overdue bills or charges arising from missed SMS alerts or reminder issues.</li>
+                    <li>Any hardware or system failures resulting from local AI inference execution.</li>
+                </ul>
+                <p class="as-is-text">The Application is provided to you "AS IS" and "AS AVAILABLE" with all faults and defects without warranty of any kind.</p>
+            </section>
+
+            <!-- 6. Intellectual Property Rights -->
+            <section id="property" class="policy-section">
+                <h2>6. Intellectual Property Rights</h2>
+                <p>All source code, design layouts, logos, trademarks, and features within Spendy are the exclusive intellectual property of the Developer. You may not reverse-engineer, decompile, modify, or commercially exploit any part of this software.</p>
+            </section>
+
+            <!-- 7. Governing Law -->
+            <section id="governing-law" class="policy-section">
+                <h2>7. Governing Law</h2>
+                <p>These Terms shall be governed by and construed in accordance with the laws of <strong>India</strong>, without regard to its conflict of law principles. Any legal action or dispute arising out of these Terms shall be subject to the exclusive jurisdiction of the courts located in <strong>Kerala, India</strong>.</p>
+            </section>
+
+            <!-- 8. Changes to Terms -->
+            <section id="changes" class="policy-section">
+                <h2>8. Changes to Terms</h2>
+                <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. Any changes will be posted directly within the Application or repository. Your continued use of the Application after changes constitute acceptance of the updated terms.</p>
+            </section>
+
+            <!-- 9. Contact Us -->
+            <section id="contact" class="policy-section">
+                <h2>9. Contact Us</h2>
+                <p>If you have any questions or require support regarding these Terms, please contact the developer:</p>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M22 6l-10 7L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Developer &amp; Support Contact</h3>
+                        <p>NidhinV — App Developer</p>
+                        <div class="email-copy-group">
+                            <span id="email-text" class="email-text">nidhinvninan29@gmail.com</span>
+                            <button id="copy-email-btn" class="btn btn-secondary btn-xs" aria-label="Copy email to clipboard">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Copy
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <p>&copy; 2026 Spendy. Developed by NidhinV.</p>
+                <p class="pledge-mini-label">Governed by Indian Laws &bull; Subject to Kerala Jurisdiction &bull; 100% Local Processing</p>
+            </footer>
+
+        </main>
+    </div>
+
+    <!-- Script File -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>
