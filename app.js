@@ -239,14 +239,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
-    // 6. Print Document Integration
-    // ==========================================
-    const printBtn = document.getElementById('print-btn');
-    printBtn.addEventListener('click', () => {
-        window.print();
-    });
-
-    // ==========================================
     // 7. Backup Encryption & Key Validator Simulator
     // ==========================================
     const encKeyInput = document.getElementById('enc-key');
