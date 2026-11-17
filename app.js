@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Status update
         simStatus.className = 'status-badge status-encrypted';
-        simStatus.textContent = 'Encrypted (Sync Ready)';
+        simStatus.textContent = 'Demo: Encrypted';
         encryptBtn.textContent = 'Encrypted';
         
         // Enable decrypt panel
@@ -293,7 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
         decKeyInput.disabled = false;
         decryptBtn.disabled = false;
         
-        showToast('Database encrypted locally & synced to Google Drive!', 'success');
+        showToast('Demo complete. No data was uploaded to Google Drive.', 'success');
         isEncrypting = false;
     });
 
